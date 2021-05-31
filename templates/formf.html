@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="POST" enctype="multipart/form-data">
+        Enter Name: <input type="text" name="username" required=required><br><br>
+        Enter Father Name: <input type="text" name="fathername" required=required><br><br>
+        Enter Mother Name: <input type="text" name="mothername" required=required><br><br>
+        Enter Date of Birth: <input type="date" name="dob" required=required><br><br>
+        Enter Email: <input type="email" name="email" required=required><br><br>
+        Upload Your Image: <input type="file" name="fi" required=required><br><br>
+        Enter your Height: <input type="text" name="height" required=required><br><br>
+        Qualification: <br>
+	<ul>
+		<li>
+			<label for="nottenth"> Not Completed 10<sup>th</sup>
+			<input type="radio" value="below tenth" id="nottenth" name="qual">
+			</label><br>
+		</li>
+		<li>
+			<label for="tenth"> 10<sup>th</sup>
+				<input type="radio" value="tenth" id="tenth" name="qual">
+			</label><br>
+		</li>
+		<li>
+			<label for="inter"> Intermediate
+				<input type="radio" value="inter" id="inter" name="qual">
+			</label><br>
+		</li>
+		<li>
+			<label for="btech"> B-Tech
+				<input type="radio" value="btech" id="btech" name="qual">
+			</label><br>
+		</li>
+		<li>
+			<label for="others"> Other
+				<input type="radio" value="Other" id="Others" name="qual">
+			</label><br><br>
+		</li>
+	</ul>
+         Address:       <input type="textarea" name="address"><br><br>
+        <input type="submit" value="Submit Details">
+    </form>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<style>
+		* {
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		}
+
+		header {
+		  width: 700px;
+		}
+
+		.header {
+		  height: 100px;
+		  background: gray;
+		  border-radius: 5px;
+		}
+
+		header img {
+		  border-radius: 50%;
+		  margin-left: 5px;
+		  padding: 5px;
+		}
+
+		header p {
+		  text-transform: uppercase;
+		  letter-spacing: 3px;
+		  color: white;
+		  width: 400px;
+		  font-size: 2.1rem;
+		  font-weight: bolder;
+		}
+
+		.main {
+		  width: 700px;
+		  margin: 0 auto;
+		  background-image: linear-gradient(45deg, black, rgba(128, 0, 0, 0.6), green);
+		  overflow: auto;
+		  margin-top: 20px;
+		  border-radius: 15px;
+		  background-color: black;
+		  padding-bottom: 25px;
+		}
+
+		.leftchat {
+		  background: gray;
+		  color: white;
+		  padding: 10px;
+		  border-radius: 20px;
+		  font-size: 1.5rem;
+		  font-family: arial;
+		  margin-left: 15px;
+		  text-transform: capitalize;
+		}
+
+		.rightchat {
+		  text-transform: capitalize;
+		  font-weight: bolder;
+		  background: rgb(30, 255, 0);
+		  color: white;
+		  padding: 10px;
+		  border-radius: 20px;
+		  float: right;
+		  font-size: 1.7rem;
+		  font-family: arial;
+		  margin-right: 10px;
+		  padding-left: 20px;
+		}
+
+		.rightchat .time {
+		  font-size: 1.4rem;
+		}
+
+		.leftchat .lefttime {
+		  font-size: 0.9rem;
+		  font-weight: normal;
+		}
+
+		.ticks {
+		  position: relative;
+		  top: 10px;
+		  left: 5px;
+		}
+
+		.tab tr td {
+		  padding: 10px;
+		}
+	</style>
+</head>
+<body background={{ url_for("static",filename="pics/d.jpg") }}>
+    <div class="main">
+		<header>
+			<div class="header">
+				<a href="{{ dp }}" target="_blank"><img src="{{ dp }}" alt="" height="100px" width="100px" align="left"> </a><br><br>
+				<p> &nbsp;&nbsp; My BioData </p>
+			</div>
+		</header>
+		<main align="left">
+			<br><br>
+			<b class="leftchat">Name &nbsp;&nbsp;&nbsp;&nbsp; <sub class="lefttime">22.46</sub></b> <br><br> <i> <span class="rightchat">{{jsonstr['username']}}<span class="time"> &nbsp&nbsp;&nbsp;&nbsp;<sub>22.46</sub> <img class="ticks" src="{{ ticks }}" width="40px" height="20px"> </span></span> </i> 
+			<br><br><br><br><br>
+			
+			<b class="leftchat">Father's Name &nbsp;&nbsp;&nbsp;&nbsp;<sub class="lefttime">22.46</sub></b> <br><br> <span class="rightchat">{{jsonstr['fathername']}} <span class="time"> &nbsp&nbsp;&nbsp;&nbsp;<sub>22.46</sub> <img class="ticks" src="{{ ticks }}" width="40px" height="20px"> </span></span> <br><br><br><br>
+            
+			<b class="leftchat">Mother's Name &nbsp;&nbsp;&nbsp;&nbsp; <sub class="lefttime">22.46</sub></b> <br><br> <span class="rightchat">{{jsonstr['mothername']}} <span class="time"> &nbsp&nbsp;&nbsp;&nbsp;<sub>22.46</sub> <img class="ticks" src="{{ ticks }}" width="40px" height="20px"></span></span>
+			<br><br><br><br>
+            
+			<b class="leftchat"> Date Of Birth &nbsp;&nbsp;&nbsp;&nbsp; <sub class="lefttime">22.46</sub></b> <br><br> <span class="rightchat">{{jsonstr['dob']}}<span class="time"> &nbsp&nbsp;&nbsp;&nbsp;<sub>22.46</sub> <img class="ticks" src="{{ ticks }}" width="40px" height="20px"> </span></span>
+			<br><br><br><br>
+            
+			<b class="leftchat">Height &nbsp;&nbsp;&nbsp;&nbsp; <sub class="lefttime">22.46</sub></b> <br><br> <span class="rightchat"> {{jsonstr['height']}} <span class="time"> &nbsp&nbsp;&nbsp;&nbsp;<sub>22.46</sub> <img class="ticks" src="{{ ticks }}" width="40px" height="20px"> </span></span>
+			<br><br><br><br>
+            
+			<b class="leftchat">Qualification &nbsp;&nbsp;&nbsp;&nbsp; <sub class="lefttime">22.46</sub></b> <br><br> <span class="rightchat"> {{jsonstr['qualification']}}
+			<span class="time"> &nbsp&nbsp;&nbsp;&nbsp;<sub>22.46</sub> <img class="ticks" src="{{ ticks }}" width="40px" height="20px"> </span>
+			</span>
+			<br><br><br><br>
+		
+			<!--
+			
+			<b class="leftchat"> Siblings &nbsp;&nbsp;&nbsp;&nbsp; <sub class="lefttime">22.46</sub></b> <br><br> <span class="rightchat"> Elder Brother: Pranav Kola <span class="time"> &nbsp&nbsp;&nbsp;&nbsp;<sub>22.46</sub> <img class="ticks" src="ticks.png" width="40px" height="20px"> </span></span>
+			<br><br><br><br>
+			
+			-->
+            
+			<b class="leftchat">Email &nbsp;&nbsp;&nbsp;&nbsp; <sub class="lefttime">22.46</sub></b> <br><br> <span class="rightchat"><a href="mailto:{{jsonstr['email']}}">{{jsonstr['email']}}</a> 
+			<span class="time"> &nbsp&nbsp;&nbsp;&nbsp;<sub>22.46</sub> <img class="ticks" src="{{ ticks }}" width="40px" height="20px"> </span>
+			</span>
+			<br><br><br><br>
+			
+			<b class="leftchat"> Address &nbsp;&nbsp;&nbsp;&nbsp; <sub class="lefttime">22.46</sub></b> 
+			<br><br>
+			<span class="rightchat">
+				{{jsonstr['address']}}
+				<span class="time"> &nbsp;&nbsp;&nbsp;&nbsp;<sub>22.46</sub> <img class="ticks" src="{{ ticks }}" width="40px" height="20px">
+				</span>
+			</span>
+		</main>
+	</div>
+</body>
+</html>
