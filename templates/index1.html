@@ -4,7 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <style>
+		* {
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		}
+
+		header {
+		  width: 700px;
+		}
+
+		.header {
+		  height: 100px;
+		  background: gray;
+		  border-radius: 5px;
+		}
+
+		header img {
+		  border-radius: 50%;
+		  margin-left: 5px;
+		  padding: 5px;
+		}
+
+		header p {
+		  text-transform: uppercase;
+		  letter-spacing: 3px;
+		  color: white;
+		  width: 400px;
+		  font-size: 2.1rem;
+		  font-weight: bolder;
+		}
+
+		.main {
+		  width: 700px;
+		  margin: 0 auto;
+		  background-image: linear-gradient(45deg, black, rgba(128, 0, 0, 0.6), green);
+		  overflow: auto;
+		  margin-top: 20px;
+		  border-radius: 15px;
+		  background-color: black;
+		  padding-bottom: 25px;
+		}
+
+		.leftchat {
+		  background: gray;
+		  color: white;
+		  padding: 10px;
+		  border-radius: 20px;
+		  font-size: 1.5rem;
+		  font-family: arial;
+		  margin-left: 15px;
+		  text-transform: capitalize;
+		}
+
+		.rightchat {
+		  text-transform: capitalize;
+		  font-weight: bolder;
+		  background: rgb(30, 255, 0);
+		  color: white;
+		  padding: 10px;
+		  border-radius: 20px;
+		  float: right;
+		  font-size: 1.7rem;
+		  font-family: arial;
+		  margin-right: 10px;
+		  padding-left: 20px;
+		}
+
+		.rightchat .time {
+		  font-size: 1.4rem;
+		}
+
+		.leftchat .lefttime {
+		  font-size: 0.9rem;
+		  font-weight: normal;
+		}
+
+		.ticks {
+		  position: relative;
+		  top: 10px;
+		  left: 5px;
+		}
+	</style>
 </head>
 
 <body background={{ url_for("static",filename="pics/d.jpg") }}>

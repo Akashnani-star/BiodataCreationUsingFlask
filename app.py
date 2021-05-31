@@ -19,7 +19,7 @@ def home_page():
 		dob = request.form.get("dob")
 		email = request.form.get("email")
 		image = request.files["fi"]
-		image.save("/flaskpro/static/pics/"+image.filename)
+		image.save("./static/pics/"+image.filename)
 		imagename = image.filename
 		height = request.form.get("height")
 		qual = request.form.get("qual")
