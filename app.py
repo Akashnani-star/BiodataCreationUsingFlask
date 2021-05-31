@@ -30,4 +30,4 @@ def home_page():
 		jsonstr ={"username":username,"fathername":fathername,"mothername":mothername,"dob":dob,"email":email,"imagename":imagename,"height":height,"qualification":qual,"address":address}
 		return render_template("index1.html",jsonstr=jsonstr,dp=pic1Dp,ticks=pic2Ticks,bg=pic3Bg)
 		
-app.run(host="0.0.0.0",port=5000,debug=True)
+app.run(host="0.0.0.0",port=5000)
